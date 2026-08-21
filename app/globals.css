@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #0B1E2D;
+  --navy-soft: #13293D;
+  --ink: #16232B;
+  --ink-soft: #55686F;
+  --paper: #F6F8F7;
+  --card: #FFFFFF;
+  --border: #E1E7E4;
+  --teal: #1F9D77;
+  --teal-dark: #157A5C;
+  --amber: #D98C1F;
+  --red: #C1443C;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, .heading {
+  font-family: 'Sora', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+a { color: var(--teal-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-dark); text-decoration: none; }
+.btn-ghost { background: transparent; color: var(--navy); border-color: var(--border); }
+.btn-ghost:hover { background: #fff; text-decoration: none; }
+.btn-dark { background: var(--navy); color: #fff; }
+.btn-dark:hover { background: var(--navy-soft); text-decoration: none; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+input, select {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+}
+input:focus, select:focus { border-color: var(--teal); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.badge-ok { background: #E4F5EE; color: var(--teal-dark); }
+.badge-warn { background: #FCF0DC; color: var(--amber); }
+.badge-danger { background: #FBE7E5; color: var(--red); }
+.badge-pending { background: #EDEFEE; color: var(--ink-soft); }
